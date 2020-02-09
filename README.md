@@ -8,10 +8,10 @@ openshift-install: Openshift-install
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.openshift-install](https://galaxy.ansible.com/devops-toolbox.openshift-install)
+[https://galaxy.ansible.com/devopstoolbox.openshift-install](https://galaxy.ansible.com/devopstoolbox.openshift-install)
 
 ```bash
-ansible-galaxy install devops-toolbox.openshift-install
+ansible-galaxy install devopstoolbox.openshift-install
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: openshift-install is configured
       import_role:
-        name: devops-toolbox.openshift-install
+        name: devopstoolbox.openshift-install
       vars:
         openshift-install_packages_state: present
         openshift-install_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
