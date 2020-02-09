@@ -1,0 +1,27 @@
+---
+# Install openshift-install packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ openshift-install_packages_remove }}"
+    state: absent
+  become: true
+  when: openshift-install_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ openshift-install_packages_repos }}"
+    state: "{{ openshift-install_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ openshift-install_packages_prereq }}"
+    state: "{{ openshift-install_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ openshift-install_packages_install }}"
+    state: "{{ openshift-install_packages_state }}"
+  become: true

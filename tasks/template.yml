@@ -1,0 +1,10 @@
+---
+# Template configuration files for openshift-install
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ openshift-install_templates_copy }}"
+  when: openshift-install_copy_templates
